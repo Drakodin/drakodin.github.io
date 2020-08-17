@@ -10,6 +10,7 @@ export interface DropdownProps {
     listOnClick: (value: any) => void,
 
     target: Array<any>,
+    listSrc: Array<any>,
     
     style: CSSStyleDeclaration,
     dropStyle: CSSStyleDeclaration,
