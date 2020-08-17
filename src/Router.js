@@ -7,7 +7,7 @@ import Home from './home/home';
 const Router = () => (
     <div>
         <Navigation/>
-        <Switch>
+        <Switch location={ window.location }>
             <Route exact path="/" component={Home}/>
             <Route exact path="/projects/mui-dropdown" component={DropdownDemo}/>
         </Switch>
