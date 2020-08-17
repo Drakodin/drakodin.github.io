@@ -9,7 +9,7 @@ const Router = () => (
         <Navigation/>
         <Switch>
             <Route exact path="/" component={Home}/>
-            <Route exact path="/mui-dropdown" component={DropdownDemo}/>
+            <Route exact path="/projects/mui-dropdown" component={DropdownDemo}/>
         </Switch>
     </div>
 )

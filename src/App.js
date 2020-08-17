@@ -6,7 +6,7 @@ import { SnackbarProvider } from 'notistack';
 function App() {
   return (
     <SnackbarProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Router/>
       </BrowserRouter>
     </SnackbarProvider>
