@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 export interface DropdownProps {
-    open?: Boolean,
-    className?: String,
-    label?: String,
+    open?: boolean,
+    variant?: string,
+    label?: string,
 
     onClick: () => void,
     onClose: () => void,

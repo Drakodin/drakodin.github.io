@@ -10,3 +10,29 @@
     outline: 0;
     border: none;
 }
+
+/* Styling for variant prop */
+
+.Mui-drop-default {
+    background-color: white;
+}
+
+.Mui-drop-light {
+    transition-duration: 0.4s;
+    border: none;
+}
+
+.Mui-drop-light:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.Mui-drop-dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.Mui-drop-dark:hover {
+    background-color: #eee;
+    color: black;
+}
