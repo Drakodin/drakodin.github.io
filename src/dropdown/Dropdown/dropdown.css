@@ -28,6 +28,7 @@
 }
 
 .Mui-drop-dark {
+    transition-duration: 0.4s;
     background-color: #1f1f1f;
     color: white;
 }
