@@ -17,6 +17,10 @@
     background-color: white;
 }
 
+.Mui-drop-default:hover {
+    cursor: pointer;
+}
+
 .Mui-drop-light {
     transition-duration: 0.4s;
     border: none;
@@ -36,4 +40,13 @@
 .Mui-drop-dark:hover {
     background-color: #eee;
     color: black;
+    cursor: pointer;
+}
+
+.Mui-drop-custom {
+    transition-duration: 0.4s;
+}
+
+.Mui-drop-custom:hover {
+    cursor: pointer;
 }

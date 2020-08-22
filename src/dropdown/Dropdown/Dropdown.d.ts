@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export interface DropdownProps {
     open?: boolean,
-    variant?: 'default' | 'light' | 'dark',
+    variant?: 'default' | 'light' | 'dark' | 'custom',
     label?: string,
 
     onClick: () => void,

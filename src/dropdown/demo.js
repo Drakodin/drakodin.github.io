@@ -1,10 +1,11 @@
 import React from 'react';
 import Dropdown from './Dropdown';
 import { Grid } from '@material-ui/core';
+import './demo.css';
 
 const DropdownDemo = () => {
     const [inputs, setInputs] = React.useState([]);
-    const [open, setOpen] = React.useState([false, false, false]);
+    const [open, setOpen] = React.useState([false, false, false, false]);
 
     const closeDropdown = (dd_id) => {
         setOpen(open.map((v, i) => (i === dd_id) ? false : v));
@@ -26,7 +27,7 @@ const DropdownDemo = () => {
     return (
         <>
             <Grid container direction="row" justify="flex-start">
-                <Grid item xs={3} lg={3}
+                <Grid item xs={2} lg={2}
                     container direction="row" justify="flex-start"
                     alignItems="center"
                     className="ml-4 mb-4"
@@ -41,7 +42,7 @@ const DropdownDemo = () => {
                         listOnClick={clickIn}
                     />
                 </Grid>
-                <Grid item xs={3} lg={3}
+                <Grid item xs={2} lg={2}
                     container direction="row" justify="flex-start"
                     alignItems="center"
                     className="ml-4 mb-4"
@@ -57,7 +58,7 @@ const DropdownDemo = () => {
                         listOnClick={clickIn}
                     />
                 </Grid>
-                <Grid item xs={3} lg={3}
+                <Grid item xs={2} lg={2}
                     container direction="row" justify="flex-start"
                     alignItems="center"
                     className="ml-4 mb-4"
@@ -70,6 +71,22 @@ const DropdownDemo = () => {
                         listSrc={["a", "b", "c", "d", "e"]}
                         onClick={() => openDropdown(2)}
                         onClose={() => closeDropdown(2)}
+                        listOnClick={clickIn}
+                    />
+                </Grid>
+                <Grid item xs={2} lg={2}
+                    container direction="row" justify="flex-start"
+                    alignItems="center"
+                    className="ml-4 mb-4"
+                >
+                    <Dropdown
+                        open={open[3]}
+                        label='Example'
+                        variant='custom'
+                        target={inputs}
+                        listSrc={["a", "b", "c", "d", "e"]}
+                        onClick={() => openDropdown(3)}
+                        onClose={() => closeDropdown(3)}
                         listOnClick={clickIn}
                     />
                 </Grid>

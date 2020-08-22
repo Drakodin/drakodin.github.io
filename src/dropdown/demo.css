@@ -1,0 +1,9 @@
+.Mui-drop-custom {
+    background-color: purple;
+    color: gold;
+}
+
+.Mui-drop-custom:hover {
+    background-color: green;
+    color: white;
+}
