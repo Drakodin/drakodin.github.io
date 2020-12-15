@@ -1,12 +1,15 @@
 import React from 'react'
-import { Typography, Button } from '@material-ui/core';
+import { Typography, Button, Grid } from '@material-ui/core';
+
+const HomeGraph = () => (
+        <Grid xs={12} md={6} item container justify="center" alignItems="center" spacing={3}>
+            <img style={{height: 357, width: 240}} src="/logo-L.png" alt="full-color logo to serve as center of CSS graph"/>
+        </Grid>
+);
 
 const Home = () => {
     return (
-        <div>
-            <Typography className="mb-3">Temporarily not available. Check out the active page!</Typography>
-            <Button href="#/projects/mui-dropdown">Go to Page</Button>
-        </div>
+        <HomeGraph/>
     )
 }
 
