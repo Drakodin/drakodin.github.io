@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppBar, Toolbar, Drawer, Divider} from '@material-ui/core';
+import ReactDOM from 'react-dom';
+import { Toolbar, Drawer, Divider} from '@material-ui/core';
 import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { IconButton, Hidden, Collapse } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -10,24 +11,36 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-    },
-    bar: {
-        background: 'linear-gradient(30deg, #458bf7, #8e69ff 64.7%)'
+        display: 'flex',
     },
     drawer: {
         [theme.breakpoints.up('sm')]: {
-            width: 250,
+            width: 240,
             flexShrink: 0,
         },
     },
+    drawerPaper: {
+        width: 240,
+        overflow: 'auto',
+        height: '100%',
+        [theme.breakpoints.up('sm')]: {
+            overflow: 'auto',
+            width: 240,
+            position: 'relative',
+            height: '100%',
+        }
+    }
 }));
 
 const Navigation = () => {
+    const rootDiv = React.useRef(null);
     const classes = useStyles();
 
     const [open, setOpen] = React.useState(false);
     const [activeIndex, setActiveIndex] = React.useState(0);
     const [projDraw, setProjDraw] = React.useState(false);
+
+    const [bar, setBar] = React.useState(undefined);
 
     const toggleDrawer = () => {
         setOpen(!open);
@@ -43,8 +56,31 @@ const Navigation = () => {
             }
         }
     }
-    
-    const container = window !== undefined ? () => window.document.body : undefined;
+
+    const sendButton = (el) => {
+        return ReactDOM.createPortal(
+            <IconButton
+                aria-label="open drawer"
+                edge="start"
+                className="cl-borderless"
+                onClick={toggleDrawer}
+            >
+                <MenuIcon/>
+            </IconButton>,
+            el
+        );
+    };
+
+    const checkEl = async (sel) => {
+        while (!document.querySelector(sel)) {
+            await new Promise(r => requestAnimationFrame(r));
+        }
+        setBar(document.querySelector(sel));
+    }
+
+    React.useEffect(() => {
+        checkEl('#tb-bar');
+    })
 
     const drawerContent = (
         <div>
@@ -93,35 +129,29 @@ const Navigation = () => {
     )
 
     return (
-        <div className={classes.root}>
-            <AppBar position='sticky' className={classes.bar}>
-                <Toolbar>
-                    <IconButton
-                        aria-label="open drawer"
-                        edge="start"
-                        className="cl-borderless"
-                        onClick={toggleDrawer}
-                    >
-                        <MenuIcon/>
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
+        <div className={classes.root} ref={rootDiv}>
             <nav className={classes.drawer} aria-label="website navigation">
                 <Hidden smUp implementation="css">
-                    <Drawer
-                        container={container}
-                        variant="temporary"
-                        anchor='left'
-                        open={open}
-                        onClose={toggleDrawer}
-                        ModalProps={{
-                            keepMounted: true,
-                        }}
-                    >
-                        {drawerContent}
-                    </Drawer>
+                    <React.Fragment>
+                        <Drawer
+                            container={rootDiv.current}
+                            variant="temporary"
+                            anchor='left'
+                            open={open}
+                            onClose={toggleDrawer}
+                            ModalProps={{
+                                keepMounted: true,
+                            }}
+                            classes={{
+                                paper: classes.drawerPaper,   
+                            }}
+                        >
+                            {drawerContent}
+                        </Drawer>
+                    </React.Fragment>
                 </Hidden>
             </nav>
+            {(bar) ? sendButton(bar) : <></>}
         </div>
     )
 }
