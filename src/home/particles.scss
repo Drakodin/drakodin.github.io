@@ -1,0 +1,63 @@
+/* Config */
+$part-color: rgba(188, 195, 255, 0.521);
+$spacing: 2000px;
+$sm-time: 60s;
+$md-time: 90s;
+
+$part-w: 8px;
+$part-h: 8px;
+
+
+@function makeParticles($max) {
+    $v: 0px 0px $part-color;
+    @for $i from 1 through $max {
+        $v: #{$v}, random($spacing)+px random($spacing)+px $part-color;
+    }
+    @return $v;
+}
+
+@mixin makeParticles($max) {
+    box-shadow: makeParticles($max);
+}
+
+.anim-root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble, .bubble::after {
+    background: transparent;
+}
+
+.bubble::after {
+    position: absolute;
+    content: "";
+    top: $spacing;
+}
+
+.bubble-p1 {
+    animation: animPart $sm-time linear infinite;
+    @include makeParticles(100);
+    width: $part-w;
+    height: $part-h;
+    border-radius: 50%;
+}
+
+.bubble-p1::after {
+    @include makeParticles(100);
+    width: $part-w;
+    height: $part-h;
+    border-radius: 50%;
+}
+
+@keyframes animPart {
+    from {
+        transform: translateY(0px), translateX(0px);
+    }
+    to {
+        transform: translateY($spacing * -1) translate((random(20)-10)+px);
+    }
+}
