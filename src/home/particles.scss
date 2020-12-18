@@ -1,11 +1,11 @@
 /* Config */
 $part-color: rgba(188, 195, 255, 0.521);
 $spacing: 2000px;
-$sm-time: 60s;
-$md-time: 90s;
+$sm-time: 120s;
+$sm2-time: 180s;
 
-$part-w: 8px;
-$part-h: 8px;
+$part-w: 4px;
+$part-h: 4px;
 
 
 @function makeParticles($max) {
@@ -40,14 +40,29 @@ $part-h: 8px;
 
 .bubble-p1 {
     animation: animPart $sm-time linear infinite;
-    @include makeParticles(100);
+    @include makeParticles(250);
     width: $part-w;
     height: $part-h;
     border-radius: 50%;
 }
 
 .bubble-p1::after {
-    @include makeParticles(100);
+    @include makeParticles(250);
+    width: $part-w;
+    height: $part-h;
+    border-radius: 50%;
+}
+
+.bubble-p2 {
+    animation: animPart $sm2-time linear infinite;
+    @include makeParticles(175);
+    width: $part-w;
+    height: $part-h;
+    border-radius: 50%;
+}
+
+.bubble-p2::after {
+    @include makeParticles(175);
     width: $part-w;
     height: $part-h;
     border-radius: 50%;

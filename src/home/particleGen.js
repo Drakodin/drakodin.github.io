@@ -5,6 +5,7 @@ export const ParticleGen = () => {
     return (
         <div className='anim-root'>
             <div className='bubble bubble-p1'></div>
+            <div className='bubble bubble-p2'></div>
         </div>
     )
 }
