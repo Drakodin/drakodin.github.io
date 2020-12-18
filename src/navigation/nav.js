@@ -63,6 +63,7 @@ const Navigation = () => {
                 aria-label="open drawer"
                 edge="start"
                 className="cl-borderless"
+                id="nav-button"
                 onClick={toggleDrawer}
             >
                 <MenuIcon/>
@@ -79,7 +80,7 @@ const Navigation = () => {
     }
 
     React.useEffect(() => {
-        checkEl('#tb-bar');
+        checkEl('#tb-bar-box');
     })
 
     const drawerContent = (
