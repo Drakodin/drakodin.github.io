@@ -73,6 +73,6 @@ $part-h: 4px;
         transform: translateY(0px), translateX(0px);
     }
     to {
-        transform: translateY($spacing * -1) translate((random(20)-10)+px);
+        transform: translateY($spacing * -1) translateX((random(20)-10)+px);
     }
 }
