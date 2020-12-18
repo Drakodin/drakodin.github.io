@@ -7,7 +7,7 @@ $sm2-time: 180s;
 $part-w: 4px;
 $part-h: 4px;
 
-
+// The following is based on a CodePen by Robin Selmer
 @function makeParticles($max) {
     $v: 0px 0px $part-color;
     @for $i from 1 through $max {
