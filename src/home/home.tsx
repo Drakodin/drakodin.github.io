@@ -4,7 +4,7 @@ import { ParticleGen } from './particleGen';
 
 const make = makeStyles(() => ({
     bg: {
-        background: 'linear-gradient(0.5turn, #001756, #2E0084 58.2%)',
+        background: 'linear-gradient(0.5turn, #001756, #0F0D57 58.2%)',
         position: 'absolute',
         height: '100%',
         width: '100%',

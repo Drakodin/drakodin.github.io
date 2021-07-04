@@ -6,8 +6,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
     bar: {
-        background: 'linear-gradient(30deg, #458bf7, #E13DFF 64.7%)'
+        background: "transparent",
+        boxShadow: "none"
     },
+    icon: {
+        color: "#f8f9fa"
+    }
 }));
 
 const HideOnScroll = (props) => {
@@ -20,16 +24,19 @@ const HideOnScroll = (props) => {
     );
 }
 
-const NavBarContent = () => (
-    <>
-        <IconButton href={`https://github.com/Drakodin`}>
-            <GitHubIcon/>
-        </IconButton>
-        <IconButton href={`https://www.linkedin.com/in/tony-tian-660636192/`}>
-            <LinkedInIcon/>
-        </IconButton>
-    </>
-)
+const NavBarContent = () => {
+    const classes = useStyles();
+    return (
+        <>
+            <IconButton href={`https://github.com/Drakodin`}>
+                <GitHubIcon className={classes.icon}/>
+            </IconButton>
+            <IconButton href={`https://www.linkedin.com/in/tony-tian-660636192/`}>
+                <LinkedInIcon className={classes.icon}/>
+            </IconButton>
+        </>
+    )
+}
 
 
 
