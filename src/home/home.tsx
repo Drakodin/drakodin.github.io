@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, makeStyles } from '@material-ui/core';
 import { ParticleGen } from './particleGen';
+import { Atom } from './molecule/atom/atom';
 
 const make = makeStyles(() => ({
     bg: {
@@ -12,6 +13,13 @@ const make = makeStyles(() => ({
         left: 0,
         zIndex: -2,
     },
+    atomContainer: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%"
+    }
 }));
 
 const HomeGraph = () => {
@@ -19,6 +27,11 @@ const HomeGraph = () => {
         <Grid>
             <div className={make().bg}/>
             <ParticleGen/>
+            <div className={make().atomContainer}>
+                <Atom content="hello world" position={{top: "15%", left: "31%"}}/>
+                <Atom content="hello world" position={{top: "16%", left: "57.5%"}}/>
+                <Atom content="hello world" position={{top: "17.5%", left: "37.5%"}}/>
+            </div>
         </Grid>
     )
 };

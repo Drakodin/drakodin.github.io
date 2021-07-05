@@ -66,7 +66,7 @@ const Navigation = () => {
                 id="nav-button"
                 onClick={toggleDrawer}
             >
-                <MenuIcon/>
+                <MenuIcon style={{color: "#f8f9fa"}}/>
             </IconButton>,
             el
         );
