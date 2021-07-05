@@ -28,9 +28,10 @@ const HomeGraph = () => {
             <div className={make().bg}/>
             <ParticleGen/>
             <div className={make().atomContainer}>
-                <Atom content="hello world" position={{top: "15%", left: "31%"}}/>
-                <Atom content="hello world" position={{top: "16%", left: "57.5%"}}/>
-                <Atom content="hello world" position={{top: "17.5%", left: "37.5%"}}/>
+                {/* Hackathons - Projects - Art */}
+                <Atom content="Innovation" position={{top: "15%", left: "11%"}}/>
+                <Atom content="Invention" position={{top: "15.5%", left: "35%"}}/>
+                <Atom content="Creation" position={{top: "15.75%", left: "17%"}}/>
             </div>
         </Grid>
     )

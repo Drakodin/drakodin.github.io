@@ -1,4 +1,9 @@
 /* Render in, fade/float in */
+@font-face {
+    font-family: 'Raleway-Italic';
+    src: url('./fonts/Raleway-Italic-VariableFont_wght.ttf');
+}
+
 @keyframes fadefloat {
     0% {
         opacity: 0;
@@ -29,7 +34,8 @@
 }
 
 .atom-text {
-    font-size: 1em;
+    font-family: 'Raleway-Italic';
+    font-size: 2vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,4 +46,8 @@
     left: 0;
     height: 100%;
     top: 0;
+}
+
+.atom:hover, .atom-text:hover {
+    cursor: pointer;
 }
