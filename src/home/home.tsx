@@ -44,7 +44,7 @@ const HomeGraph = () => {
                 <Atom content="Innovation" position={{top: "15%", left: "11%"}}/>
                 <Atom content="Invention" position={{top: "15.5%", left: "35%"}}/>
                 <Atom content="Creation" position={{top: "15.75%", left: "17%"}}/>
-                <div className={`${make().logoBubble} logo-bubble`}>
+                <div className={`${make().logoBubble} logo-bubble`} onClick={() => {window.location.href="/#/about"}}>
                     <img style={{maxWidth: '100%', maxHeight: '100%'}} src="/lotus.png" alt="logo for user site"></img>
                 </div>
             </div>
