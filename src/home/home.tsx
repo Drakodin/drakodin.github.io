@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, makeStyles } from '@material-ui/core';
 import { ParticleGen } from './particleGen';
 import { Atom } from './molecule/atom/atom';
+import './home.css';
 
 const make = makeStyles(() => ({
     bg: {
@@ -19,6 +20,17 @@ const make = makeStyles(() => ({
         left: 0,
         width: "100%",
         height: "100%"
+    },
+    logoBubble: {
+        position: 'absolute',
+        borderRadius: '50%',
+        top: '30%',
+        left: '70%',
+        width: 'min(252px, 40%)',
+        height: 'min(252px, 40%)',
+        padding: '20px',
+        objectFit: 'contain',
+        background: 'radial-gradient(circle at top 15% right 15%, rgba(209, 244, 255, 0.8) 20%, rgba(101, 193, 255, 0.75) 75%)',
     }
 }));
 
@@ -32,6 +44,9 @@ const HomeGraph = () => {
                 <Atom content="Innovation" position={{top: "15%", left: "11%"}}/>
                 <Atom content="Invention" position={{top: "15.5%", left: "35%"}}/>
                 <Atom content="Creation" position={{top: "15.75%", left: "17%"}}/>
+                <div className={`${make().logoBubble} logo-bubble`}>
+                    <img style={{maxWidth: '100%', maxHeight: '100%'}} src="/lotus.png" alt="logo for user site"></img>
+                </div>
             </div>
         </Grid>
     )

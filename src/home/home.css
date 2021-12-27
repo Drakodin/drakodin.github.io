@@ -1,0 +1,8 @@
+.logo-bubble:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.logo-bubble {
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
