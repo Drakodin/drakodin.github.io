@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d6e7b2b.chunk.css",
-    "main.js": "/static/js/main.4dc90544.chunk.js",
-    "main.js.map": "/static/js/main.4dc90544.chunk.js.map",
+    "main.css": "/static/css/main.2604a868.chunk.css",
+    "main.js": "/static/js/main.a3a47904.chunk.js",
+    "main.js.map": "/static/js/main.a3a47904.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9fb4a9a2.js",
     "runtime-main.js.map": "/static/js/runtime-main.9fb4a9a2.js.map",
-    "static/js/2.3b42705b.chunk.js": "/static/js/2.3b42705b.chunk.js",
-    "static/js/2.3b42705b.chunk.js.map": "/static/js/2.3b42705b.chunk.js.map",
+    "static/js/2.37742907.chunk.js": "/static/js/2.37742907.chunk.js",
+    "static/js/2.37742907.chunk.js.map": "/static/js/2.37742907.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1d6e7b2b.chunk.css.map": "/static/css/main.1d6e7b2b.chunk.css.map",
-    "static/js/2.3b42705b.chunk.js.LICENSE.txt": "/static/js/2.3b42705b.chunk.js.LICENSE.txt",
+    "static/css/main.2604a868.chunk.css.map": "/static/css/main.2604a868.chunk.css.map",
+    "static/js/2.37742907.chunk.js.LICENSE.txt": "/static/js/2.37742907.chunk.js.LICENSE.txt",
     "static/media/atom.css": "/static/media/Raleway-Italic-VariableFont_wght.87701616.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.9fb4a9a2.js",
-    "static/js/2.3b42705b.chunk.js",
-    "static/css/main.1d6e7b2b.chunk.css",
-    "static/js/main.4dc90544.chunk.js"
+    "static/js/2.37742907.chunk.js",
+    "static/css/main.2604a868.chunk.css",
+    "static/js/main.a3a47904.chunk.js"
   ]
 }
