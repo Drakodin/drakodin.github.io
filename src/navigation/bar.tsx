@@ -31,9 +31,6 @@ const NavBarContent = () => {
             <IconButton href={`https://github.com/Drakodin`}>
                 <GitHubIcon className={classes.icon}/>
             </IconButton>
-            <IconButton href={`https://www.linkedin.com/in/tony-tian-660636192/`}>
-                <LinkedInIcon className={classes.icon}/>
-            </IconButton>
         </>
     )
 }
